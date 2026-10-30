@@ -12,7 +12,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class CategoryContoller {
-    private CategoryServiceImplementation categoryServiceImplementation = new CategoryServiceImplementation();
+
+    private final CategoryServiceImplementation categoryServiceImplementation;
+
+    public CategoryContoller(
+            CategoryServiceImplementation categoryServiceImplementation) {
+        this.categoryServiceImplementation = categoryServiceImplementation;
+    }
 
 //    @GetMapping("/api/public/categories")
     @RequestMapping(value = "/public/categories", method = RequestMethod.GET)
