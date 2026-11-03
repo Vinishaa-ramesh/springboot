@@ -15,7 +15,6 @@ import java.util.Optional;
 @Service
 public class CategoryServiceImplementation implements CategoryService {
 
-    private List<Category> categories = new ArrayList<>();
     @Autowired
     private CategoryRepository categoryRepository;
 
